@@ -1,7 +1,4 @@
-function displayData(data) {
-    this.text.setText(data);
-  // this.text.setText(`Dados ...`);
-}
+
 
 async function fetchDataFromAPI() {
 
@@ -46,7 +43,7 @@ async function create() {
      try{
       let dados = await fetchDataFromAPI();
 
-      //displayData(dados.count);
+    
       this.text.setText(dados.count);
 
       dados.results.forEach((item, index) => {
@@ -62,11 +59,7 @@ async function create() {
 }
 
 function update() {
- // let dados = fetchDataFromAPI();
 
-  //this.fetchDataFromAPI();
-  //displayData(dados);
-//  this.text.setText(dados);
   let cursors = this.input.keyboard.createCursorKeys();
   if (
     cursors.left.isDown ||
