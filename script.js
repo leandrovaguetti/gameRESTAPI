@@ -1,5 +1,5 @@
 
-
+// ==== ADICIONADO AO PROJETO ORIGINAL ===
 async function fetchDataFromAPI() {
 
   try{
@@ -14,16 +14,17 @@ async function fetchDataFromAPI() {
       throw error;
     }
 }
-
+//=======================================
 
 function preload() {
   this.load.image("player", "assets/repl.png");
 }
-
+// async Adicionado AO MÉTODO create
 async function create() {
 
+// ==== ADICIONADO AO PROJETO ORIGINAL ===
   this.textObjects = [];
-  
+// ======================================  
   this.w = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
   this.a = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
   this.s = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S);
@@ -35,9 +36,10 @@ async function create() {
   this.player.setCollideWorldBounds(true);
 
   //===============================
-
+ 
+// ==== ADICIONADO AO PROJETO ORIGINAL ===
     // Crie objetos do jogo e defina a lógica inicial
-    this.text = this.add.text(10, 10, 'Carregando...', { fontSize: '24px', fill: '#ffffff' });
+    this.text = this.add.text(10, 10, 'Carregando...', { fontSize: '24px', fill: '#000000' });
 
   
      try{
@@ -55,6 +57,7 @@ async function create() {
      }catch(error){
        this.text.setText(error);
      }
+  //===============================
   //===============================
 }
 
