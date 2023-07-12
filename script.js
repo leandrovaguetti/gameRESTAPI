@@ -47,7 +47,7 @@ async function create() {
       this.text.setText(dados.count);
 
       dados.results.forEach((item, index) => {
-      const text = this.add.text(10, 30 + index * 20, item.name,{ fontSize: '16px', fill: '#ffffff' });
+      const text = this.add.text(10, 30 + index * 20, item.name,{ fontSize: '16px', fill: '	#000000' });
       this.textObjects.push(text);
         
     });
